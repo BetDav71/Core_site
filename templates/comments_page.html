@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	<form method="GET" action="">
+		<div>
+			<label>Enter Your think</label>
+			<input type="text" name="body">
+		</div>
+		<input type="submit">
+	</form>
+	<div>
+		{% for i in coments %}
+			<div>
+				{{ i }}
+				
+				
+			</div><br>
+		{% endfor %}
+	</div>
+</body>
+</html>

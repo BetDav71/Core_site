@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+		{% include 'base.html' %}
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<h1 class='text-center'>Update</h1>
+				<form method="POST" action="">
+					<div class='form-group text-center'>
+						<label>Enter Title</label>
+						<input type="text" name="title" value='{{title}}'>
+					</div>
+					<br/>
+					<div class='form-group text-center'>
+						<label>Enter body</label>
+						<textarea rows = "5" cols = "50" name = "body" value=''>{{body}}
+			            </textarea>
+					</div>
+					<br>
+					<div class='form-group text-center'>
+						<input class='btn btn-primary' type="submit" name="">
+					</div>
+					<div class='text-center'><p class="text-danger">{{status}}</p></div>
+				</form>
+	<br>
+</body>
+</html>

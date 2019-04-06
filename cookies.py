@@ -1,0 +1,5 @@
+
+
+cookies_param = {
+	'user':''
+}

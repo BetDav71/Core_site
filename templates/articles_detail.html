@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Article {{id}}</title>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+	<body>
+			{% include 'base.html' %}
+		<div class='container'>
+		<div class='row'>
+
+			<h1>{{title}}</h1>
+		</div>
+		<br><br>
+		<div class='row'>
+			<div class=''>{{body}}</div>
+		</div>
+		<br>
+		<br>
+		<div class='row'>
+		{{baz}}
+		</div>
+		<br>
+		{% if user != '' %}
+			<form method="POST" action="">
+				<div class="form-group">
+					<label>Enter Your think</label>
+					<input type="text" name="think">
+				</div>
+				<input class="btn btn-primary" type="submit">
+			</form>
+		{% else %}
+		
+			<h4> Authorisate to coment  </h4>
+
+		{% endif %}
+		<br>
+				{% for i in coments %}
+						<p class='text-secondary'>{{ i[0] }}</p>
+						{{ i [1]}}
+						<br>
+				{% endfor %}
+
+
+		</div>
+	</body>
+</html>
