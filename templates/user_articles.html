@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Article Page</title>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	{% include 'base.html' %}
+
+	<div class='container'>
+		<h1>Artiles page</h1>
+		<br>
+		<h3><a class='text-info' href="/articles/add">Add</a></h3>
+		<h2>
+		{% for i in articles %}
+
+			<div class = 'row'>
+				{% if user == i[-2] %}
+					<div class='col' style='white-space: nowrap;overflow: hidden;padding: 5px;text-overflow: ellipsis;'><a class="text-dark" style='text-decoration: none;' href='/articles/detail?id={{i[-1]}}'>{{i[0]}}</a></div>
+					<div class='col-md-auto'><a class="btn btn-secondary" href="/articles/update?id={{i[-1]}}">Update</a></div>
+					<div class='col col-sm-1'><a class="btn btn-danger" href="/articles/delete?id={{i[-1]}}">Delete</a></div>
+				{% endif %}
+			</div>
+
+		{% endfor %}
+		</h2>
+	</div>
+	
+</body>
+</html>
